@@ -1,7 +1,6 @@
 %close all; clear all; clc;
 
-% addpath('/home/gabriel/Dropbox/MyFunc/VPLab_Code/');
-%addpath('PhonationModelsCode')
+%addpath('TBCM')
 function [dX,Lg,X,a_g,Ut,Pgo,Pout,Psub,Pcol,tm] = SimuBaseSignal(ActVec,Pl,Vow,gender)
 
 % Simulation information
