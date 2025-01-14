@@ -1,0 +1,42 @@
+%%
+% ElasticForces: Function implementing the computation of the (linear and
+% nonlinear) elastic forces involved in the body cover model of the vocal
+% folds.
+%
+% Structure: [Fku,Fkl,Fkb,Fkc] = ElasticForces(TBCMobj)
+% where
+%
+% TBCMObj: is an object from BodyCoverModel (handle) class,
+% Fku: is the resulting elastic force in the upper mass,
+% Fkl: is the resulting elastic force in the lower mass,
+% Fkb: is the resulting elastic force in the body mass,
+% Fkc: is the resulting coupling force between the upper and lower mases.
+%
+% References:
+% [1] B. H. Story and I. R. Titze, “Voice simulation with a body‐cover 
+%     model of the vocal folds,” J. Acoust. Soc. Am., vol. 97, no. 2, 
+%     pp. 1249–1260, Feb. 1995.
+%
+% Coded by Gabriel Alzamendi, July 2019.
+% Based on previous code by Matías Zañartu and Gabriel Galindo.
+function [Fku,Fkl,Fkb,Fkc] = ElasticForces(TBCMobj)
+  % Mass displacements
+  xu = TBCMobj.xData(1);
+  xl = TBCMobj.xData(2);
+  xb = TBCMobj.xData(3);
+%   xu0 = TBCMobj.xu0;
+%   xl0 = TBCMobj.xl0;
+  xb0 = TBCMobj.xb0;
+  xu0 = 0.5*TBCMobj.xi_02 - TBCMobj.xu_col; % Rest position for the upper mass according to the TBCM
+%   xu0 = 0.5*max([-1e-4, TBCMobj.xi_02]) - TBCMobj.xu_col; % Rest position for the upper mass according to the TBCM
+%   xl0 = 0.5*TBCMobj.xi_01 - TBCMobj.xl_col; % Rest position for the lower mass according to the TBCM
+%   xl0 = 0.5*max([TBCMobj.xi_01-TBCMobj.xi_02, TBCMobj.xi_01]) - TBCMobj.xl_col; % Rest position for the lower mass according to the TBCM
+%   xl0 = 0.5*max([0, TBCMobj.xi_01]); % Rest position for the lower mass according to the TBCM
+  
+  % Elastic forces
+  Fku = - TBCMobj.ku*(((xu-xu0)-(xb-xb0)) + TBCMobj.NonLinMode*TBCMobj.etau*((xu-xu0)-(xb-xb0))^3); % [N] Elastic force in the upper mass
+  Fkl = - TBCMobj.kl*(((xl-xl0)-(xb-xb0)) + TBCMobj.NonLinMode*TBCMobj.etal*((xl-xl0)-(xb-xb0))^3); % [N] Elastic force in the lower mass
+  Fkb = - TBCMobj.kb*((xb-xb0) + TBCMobj.NonLinMode*TBCMobj.etab*(xb-xb0)^3); % [N] Elastic force in the body mass
+  Fkc = - TBCMobj.kc*((xl-xl0) - (xu-xu0)); % [N] Coupling force between the upper and lower mases
+
+end
