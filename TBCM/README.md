@@ -16,6 +16,8 @@ This folder contains implementations related to the body cover model used in voc
 ## References
 - Story, B. H., & Titze, I. R. (1995). Voice simulation with a body‐cover model of the vocal folds. The Journal of the Acoustical Society of America, 97(2), 1249-1260.
 
+
+
 ---
 
 # Muscle Activation
@@ -29,6 +31,9 @@ This folder contains the muscle activation model used in simulations.
 
 ## References
 - Titze, I. R., & Story, B. H. (2002). Rules for controlling low-dimensional vocal fold models with muscle activation. The Journal of the Acoustical Society of America, 112(3), 1064-1076.
+
+
+
 ---
 
 # Muscle Control Model
@@ -55,6 +60,8 @@ This folder includes the muscle control model for vocal fold simulations.
 - Titze, I. R., & Hunter, E. J. (2007). A two-dimensional biomechanical model of vocal fold posturing. The Journal of the Acoustical Society of America, 121(4), 2254-2260.
 - Titze, I. R., & Story, B. H. (2002). Rules for controlling low-dimensional vocal fold models with muscle activation. The Journal of the Acoustical Society of America, 112(3), 1064-1076.
 
+
+
 ---
 
 # Subglottal Tract Model
@@ -76,6 +83,8 @@ This folder contains implementations related to the subglottal tract model. The 
 
 ## References
 - Story, B. H. (1995). Physiologically-based speech simulation using an enhanced wave-reflection model of the vocal tract. the University of Iowa.
+
+
 
 ---
 
@@ -100,6 +109,9 @@ This folder contains the vocal tract model, including specific configurations. T
 ## References
 - Story, B. H. (1995). Physiologically-based speech simulation using an enhanced wave-reflection model of the vocal tract. the University of Iowa.
 
+
+
+
 ---
 
 # Triangular Body Cover Model
@@ -120,14 +132,11 @@ This folder includes implementations of the triangular body cover model.
 - `TriangularBodyCoverModel.m`: TBCM mass object
 - `zzCollisionForces.m`: [under construction]
 
-## Usage Example
-```matlab
-% Example code to use the triangular body cover model
-```
-
 ## References
 - Galindo, G. E., Peterson, S. D., Erath, B. D., Castro, C., Hillman, R. E., & Zañartu, M. (2017). Modeling the pathophysiology of phonotraumatic vocal hyperfunction with a triangular glottal model of the vocal folds. Journal of Speech, Language, and Hearing Research, 60(9), 2452-2471.
 - Alzamendi, G. A., Peterson, S. D., Erath, B. D., Hillman, R. E., & Zañartu, M. (2022). Triangular body-cover model of the vocal folds with coordinated activation of the five intrinsic laryngeal muscles. The Journal of the Acoustical Society of America, 151(1), 17-30.
+
+
 
 ---
 
@@ -145,11 +154,6 @@ This folder includes individual models of intrinsic muscles related to phonation
 - `Muscle1DModel.m`: [under construction]
 - `PosteriorCricoarytenoidModel.m`: [under construction]
 - `ThyroarytenoidModel.m`: [under construction]
-
-## Usage Example
-```matlab
-% Example code to use intrinsic muscle models
-```
 
 ## References
 - Titze, I. R. The Myoelastic Aerodynamic Theory of Phonation, 1st edition. National Center for Voice and Speech, 2006.
