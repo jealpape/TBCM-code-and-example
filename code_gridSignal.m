@@ -6,7 +6,7 @@ clc; close all; clear;
 
 
 addpath("tools/")
-addpath("PhonationModelsCode/")
+addpath("TBCM/")
 
 resul = './Prueba/';
 vowels = {'AE', 'A'};
