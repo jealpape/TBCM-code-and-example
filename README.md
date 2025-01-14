@@ -40,5 +40,5 @@ This script uses the `SimuBaseSignal.m` function within for-loops to compute sig
 Special thanks to Dr. Gabriel Alzamendi for his hard work in building and implementing this code.
 
 ## References
-- Galindo, G. E., Peterson, S. D., Erath, B. D., Castro, C., Hillman, R. E., & Zañartu, M. (2017). Modeling the pathophysiology of phonotraumatic vocal hyperfunction with a triangular glottal model of the vocal folds. Journal of Speech, Language, and Hearing Research, 60(9), 2452-2471.
-- Alzamendi, G. A., Peterson, S. D., Erath, B. D., Hillman, R. E., & Zañartu, M. (2022). Triangular body-cover model of the vocal folds with coordinated activation of the five intrinsic laryngeal muscles. The Journal of the Acoustical Society of America, 151(1), 17-30.
+- Galindo, G. E., Peterson, S. D., Erath, B. D., Castro, C., Hillman, R. E., & Zañartu, M. (2017). Modeling the pathophysiology of phonotraumatic vocal hyperfunction with a triangular glottal model of the vocal folds. Journal of Speech, Language, and Hearing Research, 60(9), 2452-2471. DOI: https://doi.org/10.1044/2017_JSLHR-S-16-0412
+- Alzamendi, G. A., Peterson, S. D., Erath, B. D., Hillman, R. E., & Zañartu, M. (2022). Triangular body-cover model of the vocal folds with coordinated activation of the five intrinsic laryngeal muscles. The Journal of the Acoustical Society of America, 151(1), 17-30. DOI: https://doi.org/10.1121/10.0009169
